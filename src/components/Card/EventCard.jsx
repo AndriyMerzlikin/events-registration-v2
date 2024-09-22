@@ -10,7 +10,7 @@ import dayjs from "dayjs";
 // eslint-disable-next-line react/prop-types
 const EventCard = ({ event }) => {
   // eslint-disable-next-line react/prop-types
-  const { title, description, _id, eventDate, organizer } = event;
+  const { title, description, _id, eventDate, organizer, imageUrl } = event;
 
   const navigate = useNavigate();
 
@@ -18,7 +18,7 @@ const EventCard = ({ event }) => {
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{ height: 140 }}
-        image="src/assets/some-picture.png"
+        image={imageUrl || "src/assets/some-picture.png"}
         title="event picture"
       />
       <CardContent>
