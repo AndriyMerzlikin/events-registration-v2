@@ -13,16 +13,19 @@ import dayjs from "dayjs";
 import { BASE_URL } from "../constants/urlConstants.js";
 
 const HomePage = () => {
+  console.log("HomePage component rendered");
   const [eventsData, setEventsData] = useState([]);
   const [sortCriteria, setSortCriteria] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
+    console.log("Fetching events...");
     const fetchEvents = async () => {
       try {
         const res = await fetch(BASE_URL);
         const data = await res.json();
         setEventsData(data);
+        console.log(data);
       } catch (e) {
         console.log(e);
       }
@@ -60,6 +63,7 @@ const HomePage = () => {
       <Box sx={{ display: "flex", justifyContent: "center", mb: 2 }}>
         <FormControl sx={{ minWidth: 200 }}>
           <InputLabel id="sort-label">Sort by</InputLabel>
+          <h2>adfl;gkjsfgnhsfgn</h2>
           <Select
             labelId="sort-label"
             value={sortCriteria}

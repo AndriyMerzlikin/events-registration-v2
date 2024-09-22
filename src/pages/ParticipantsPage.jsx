@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { BASE_URL } from "../constants/urlConstants";
 
 const ParticipantsPage = () => {
+  console.log("reg page");
   const { eventId } = useParams();
 
   const [participants, setParticipants] = useState([]);
